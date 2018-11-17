@@ -1,0 +1,33 @@
+body {
+   margin: 0;
+   padding: 12px;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+
+.card {
+   position: relative;
+   margin: 0 0 16px 0;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+}
+
+.card-title {
+   padding: 6px 8px;
+   background-color: rgb(233, 233, 233);
+   font-weight: bold;
+}
+
+.card-title small {
+   position: absolute;
+   top: 6px;
+   right: 10px;
+}
+
+.card-body {
+   padding: 6px 8px;
+}
