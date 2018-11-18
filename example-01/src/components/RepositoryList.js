@@ -10,7 +10,6 @@ const RepositoryList = (props) => {
       <div>
          <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
             {({ data, loading }) => {
-
                const { viewer } = data;
 
                if (loading || !viewer) {

@@ -7,8 +7,6 @@ class RepositoryItem extends React.Component {
    render() {
       const { name, primaryLanguage, descriptionHTML, stargazers, watchers } = this.props;
 
-      console.log('');
-
       return (
          <div className="card">
             <div className="card-title">
