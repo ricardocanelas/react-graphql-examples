@@ -6,7 +6,14 @@ body {
      sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
- }
+}
+
+hr {
+   margin: 12px 0 16px 0;
+   border: none;
+   border-bottom: 1px solid #d1d1d1;
+   box-shadow: 0 1px 4px rgb(230, 230, 230);
+}
 
 
 .card {
@@ -26,6 +33,16 @@ body {
    position: absolute;
    top: 6px;
    right: 10px;
+}
+
+.card-star {
+   display: inline;
+   margin: 0 0 0 12px;
+}
+
+.card-watch {
+   display: inline;
+   margin: 0 0 0 12px;
 }
 
 .card-body {

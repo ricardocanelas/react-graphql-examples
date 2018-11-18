@@ -1,17 +1,8 @@
 import React from 'react'
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
-import Loading from './components/Loading';
-import ErrorMessage from './components/ErrorMessage';
-
-const GET_CURRENT_USER = gql`
-   {
-      viewer {
-         login
-         namexyz
-      }
-   }
-`
+import Loading from './UI/Loading';
+import ErrorMessage from './UI/ErrorMessage';
+import { GET_CURRENT_USER } from '../utils/queries'
 
 const Profile = (props) => {
 

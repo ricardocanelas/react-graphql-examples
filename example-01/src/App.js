@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Profile from './Profile'
-import RepositoryList from './RepositoryList'
+import Profile from './components/Profile'
+import RepositoryList from './components/RepositoryList'
 
 import "./style.css";
 

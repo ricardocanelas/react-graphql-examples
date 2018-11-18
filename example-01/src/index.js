@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
@@ -14,7 +13,6 @@ const GITHUB_BASE_URL = 'https://api.github.com/graphql';
 
 const httpLink = new HttpLink({
    uri: GITHUB_BASE_URL,
-   credentials: 'same-origin',
    headers: {
       authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
    },
@@ -27,7 +25,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
    }
 
    if (networkError) {
-      console.error(networkError[0].message);
+      console.error(networkError);
      // do something with network error
    }
 });
@@ -46,8 +44,3 @@ ReactDOM.render(
       <App />
    </ApolloProvider>,
    document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
