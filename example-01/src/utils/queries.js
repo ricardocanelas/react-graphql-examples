@@ -11,6 +11,30 @@ export const GET_CURRENT_USER = gql`
 `
 
 export const GET_REPOSITORIES_OF_CURRENT_USER = gql`
+  query($cursor: String) {
+    viewer {
+      repositories(
+        first: 5
+        orderBy: { direction: DESC, field: STARGAZERS }
+        after: $cursor
+      ) {
+        edges {
+          node {
+            ...repository_fragment
+          }
+        }
+        pageInfo {
+           endCursor
+           hasNextPage
+        }
+      }
+    }
+  }
+
+  ${REPOSITORY_FRAGMENT}
+`;
+
+export const GET_REPOSITORIES_OF_CURRENT_USER_WITHOUT_PAGINATION = gql`
   {
     viewer {
       repositories(

@@ -13,7 +13,9 @@ class RepositoryItem extends React.Component {
                {name} ({stargazers.totalCount}) ({watchers.totalCount})
                <RepositoryStar {...this.props} />
                <RepositoryWatch {...this.props} />
-               <small>{primaryLanguage.name}</small>
+               {primaryLanguage && (
+                  <small>{primaryLanguage.name}</small>
+               )}
             </div>
             <div className="card-body">
                <div
