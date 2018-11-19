@@ -59,6 +59,16 @@ const RepositoryWatch = (props) => {
                   : 'SUBSCRIBED',
             }}
             update={updateWatch}
+            optimisticResponse={{
+               updateSubscription: {
+                  __typename: 'Mutation',
+                  subscribable: {
+                     __typename: 'Repository',
+                     id,
+                     viewerSubscription: isWatch(viewerSubscription) ? 'UNSUBSCRIBED' : 'SUBSCRIBED'
+                  }
+               }
+            }}
         >
           {(updateSubscription, { data, loading, error }) => (
             <button onClick={updateSubscription}
