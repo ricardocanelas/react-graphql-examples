@@ -1,6 +1,7 @@
 import React from 'react'
 import { Query } from 'react-apollo'
 import Loading from './UI/Loading';
+import FetchMore from './UI/FetchMore';
 import RepositoryItem from './RepositoryItem'
 import { GET_REPOSITORIES_OF_CURRENT_USER } from '../utils/queries';
 
@@ -51,21 +52,17 @@ const RepositoryList = (props) => {
                            {...item.node} />
                      ))}
 
-                     {loading && (
-                        <Loading />
-                     )}
-
-                     {viewer.repositories.pageInfo.hasNextPage && (
-                        <button onClick={() => fetchMore({
-                           variables: {
-                              cursor: viewer.repositories.pageInfo.endCursor,
-                           },
-                           updateQuery: updateQuery,
-                        })}>
-                           More Repositories
-                        </button>
-                     )}
-
+                     <FetchMore
+                        loading={loading}
+                        hasNextPage={viewer.repositories.pageInfo.hasNextPage}
+                        variables={{
+                           cursor: viewer.repositories.pageInfo.endCursor
+                        }}
+                        updateQuery={updateQuery}
+                        fetchMore={fetchMore}
+                     >
+                        More Repositories
+                     </FetchMore>
                   </div>
                )
             }}
