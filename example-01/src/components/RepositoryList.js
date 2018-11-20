@@ -44,6 +44,10 @@ const RepositoryList = (props) => {
                   )
                }
 
+               if (!viewer.repositories.edges.length) {
+                  return <div>No repositories found</div>
+               }
+
                return (
                   <div>
                      {viewer.repositories.edges.map(item => (
