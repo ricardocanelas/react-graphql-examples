@@ -1,3 +1,14 @@
+type PageInfo {
+    hasNextPage: Boolean!
+    endCursor: String!
+}
+
+type ProductPagination {
+    totalCount: Int!
+    edges: [Product!]!
+    pageInfo: PageInfo!
+}
+
 type Product {
     id: String
     name: String
@@ -9,6 +20,7 @@ type Product {
 type Query {
     product(id: String): Product
     products: [Product]
+    productsPagination(cursor: String, limit: Int): ProductPagination
 }
 
 type Mutation {
