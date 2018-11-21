@@ -11,4 +11,12 @@ const ProductSchema = new mongoose.Schema({
     price: { type: Number },
 })
 
+// -------------
+// Virtual Types
+// -------------
+
+ProductSchema.virtual('id').get(function() {
+    return this.toJSON()._id.toString()
+})
+
 export default mongoose.models.Product || mongoose.model('Product', ProductSchema)
