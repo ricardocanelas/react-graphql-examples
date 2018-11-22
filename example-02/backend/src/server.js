@@ -1,7 +1,8 @@
 import mongoose from 'mongoose'
-import { GraphQLServer } from 'graphql-yoga'
+import { GraphQLServer, PubSub } from 'graphql-yoga'
 import Query from './graphql/resolvers/Query'
 import Mutation from './graphql/resolvers/Mutation'
+import Subscription from './graphql/resolvers/Subscription'
 
 // ---------
 // Constants
@@ -21,11 +22,16 @@ mongoose.set('debug', true)
 // GraphQL Server
 // --------------
 
+const pubsub = new PubSub()
 const server = new GraphQLServer({
     typeDefs: './src/graphql/schema.graphql',
     resolvers: {
         Query,
         Mutation,
+        Subscription,
+    },
+    context: {
+        pubsub,
     },
 })
 

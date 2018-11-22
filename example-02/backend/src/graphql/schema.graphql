@@ -17,6 +17,10 @@ type Product {
     price: Float
 }
 
+type ProductMessage {
+    message: Product!
+}
+
 type Query {
     product(id: String): Product
     products: [Product]
@@ -27,4 +31,8 @@ type Mutation {
     createProduct(name: String!, description: String, image: String, price: String): Product
     updateProduct(id: ID!, name: String, description: String, image: String, price: String): Product
     deleteProduct(id: ID!): Product
+}
+
+type Subscription {
+    productCreated: ProductMessage!
 }
