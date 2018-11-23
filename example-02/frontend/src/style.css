@@ -1,0 +1,77 @@
+html,
+body {
+    min-height: 100vh;
+    overflow:auto;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    background-color:beige;
+    background: url(http://thepatternlibrary.com/img/am.jpg)
+}
+
+h1 {
+    padding: 0 0 6px 0;
+    margin: 0 0 10px 0 !important;
+}
+
+.container {
+    max-width: 700px;
+    padding: 16px;
+    background-color: white;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0px 4px rgb(83, 83, 83);
+    min-height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 16px;
+    background-color: whitesmoke;
+    margin-bottom: 12px;
+}
+
+form .field {
+    margin-right: 16px;
+}
+
+form label {
+    margin-right: 10px;
+}
+
+form input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form .field.price input {
+    width: 80px;
+}
+
+form button {
+    margin-left: auto;
+    width: 60px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 0 0 10px 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-item .name{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.product-item .price{
+    font-size: 12px;
+}
