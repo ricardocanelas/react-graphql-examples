@@ -7,13 +7,15 @@ body {
 body {
     margin: 0;
     padding: 16px;
-    background-color:beige;
-    background: url(http://thepatternlibrary.com/img/am.jpg)
+    background: rgb(0,145,175);
+    background: linear-gradient(90deg, rgba(0,145,175,1) 0%, rgba(0,212,255,1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     padding: 0 0 6px 0;
     margin: 0 0 10px 0 !important;
+    font-family: Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 .container {
@@ -21,7 +23,7 @@ h1 {
     padding: 16px;
     background-color: white;
     border-right: 1px solid #ccc;
-    box-shadow: 2px 0px 4px rgb(83, 83, 83);
+    box-shadow: 2px 0px 4px #0aaaca;
     min-height: 100%;
 }
 
