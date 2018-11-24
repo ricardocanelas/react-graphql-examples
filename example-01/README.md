@@ -1,16 +1,25 @@
-## Others
+## 🍄️ / Example-01
 
-- Generate a token - [https://github.com/settings/tokens](https://github.com/settings/tokens)
+👉🏻 Installing
 
-- [GitHub GraphQL Explorer](https://developer.github.com/v4/explorer/)
+1. Clone this repository using `git clone`.
+2. Onto the repository, install the dependecies using `yarn install` or `npm install`
 
-## Libraries
+```
+yarn install
+yarn start
+```
 
-- Apollo Client (endpoint, a cache to manage your data. )
-- Apollo Cache Inmemory (avoids to make requests with an identical query twice; automatically normalizes data)
-- Apollo Link
-- Apollo Link Http (used to configure the URI)
-- Apollo Link Error (used to configure the URI)
-- Apollo Graphq
-- Apollo Graphq-Tag
-- Apollo React-Apollo
+👉🏻 Configuration
+
+**You need to have a Github token.**
+
+1. Go to [https://github.com/settings/tokens](https://github.com/settings/tokens) and create a new token.
+
+2. Select this options:
+
+![alt options](screen_options.jpg)
+
+3. Rename the file: `.env.example` to `.env`
+
+4. In the `.env` add your token
