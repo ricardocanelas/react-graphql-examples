@@ -8,14 +8,14 @@ export default {
 
     products: async () => {
         return await Product.find({})
-            .sort({ _id: 1 })
+            .sort({ _id: -1 }) // desc
             .exec()
     },
 
     productsPagination: async (_, { cursor, limit = 100 }) => {
         const cursorOptions = cursor ? { _id: { $gt: mongoose.Types.ObjectId(cursor) } } : {}
         const results = await Product.find(cursorOptions)
-            .sort({ _id: 1 })
+            .sort({ _id: -1 }) // desc
             .limit(limit + 1)
             .exec()
 

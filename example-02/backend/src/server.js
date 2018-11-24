@@ -45,6 +45,15 @@ mongoose
         { useNewUrlParser: true }
     )
     .then(() => {
-        server.start(() => console.log('Server is running on localhost:' + PORT))
+        const options = {
+            port: PORT,
+            endpoint: '/graphql',
+            subscriptions: '/subscriptions',
+            playground: '/playground',
+        }
+
+        server.start(options, ({ port }) =>
+            console.log(`Server started, listening on port ${port} for incoming requests.`)
+        )
     })
     .catch(err => console.error(err))

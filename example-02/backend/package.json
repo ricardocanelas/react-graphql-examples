@@ -1,8 +1,6 @@
 {
-  "name": "example-02",
+  "name": "react-graphql-examples-2-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "license": "MIT",
   "author": "Ricardo Canelas",
   "dependencies": {

@@ -2,9 +2,26 @@ import React from "react";
 import { Mutation } from "react-apollo";
 import { CREATE_PRODUCT } from "./graphql/mutation";
 
+const isValid = (data) => {
+  let result = true
+  if (data.name.trim() === '' ||
+    data.price.trim() === '') {
+    result = false;
+    alert("The name and price fields are require.");
+  } else {
+    if (isNaN(data.price)) {
+      result = false;
+      alert("The price field has to be a number.");
+    }
+  }
+
+  return result;
+}
+
 class ProductItem extends React.Component {
   state = {
-    form: { name: "Anything", price: "100" }
+    form: { name: "Anything", price: "100" },
+    sending: false,
   };
 
   handleChange = prop => e => {
@@ -42,7 +59,17 @@ class ProductItem extends React.Component {
               <button
                 onClick={e => {
                   e.preventDefault();
-                  createProduct();
+                  if (this.state.sending) return;
+
+                  if (isValid(this.state.form)) {
+                    this.setState({ sending: true })
+                    createProduct();
+                    this.setState({
+                      form: { name: '', price: '' },
+                      sending: false
+                    });
+                  }
+
                 }}
               >
                 Add

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductItem = ({ data: { name, price }}) => {
+const ProductItem = ({ name, price }) => {
     return (
         <div className='product-item'>
             <div className='name'>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductForm from './ProductForm';
-import ProductItem from './ProductItem';
+import ProductList from './ProductList';
 
 import { Query } from 'react-apollo';
 import { GET_PRODUCTS } from './graphql/query';
@@ -8,7 +8,6 @@ import { GET_PRODUCTS } from './graphql/query';
 import "./style.css";
 
 class App extends Component {
-
 
    render() {
       return (
@@ -19,7 +18,8 @@ class App extends Component {
             <ProductForm />
 
             <Query query={GET_PRODUCTS}>
-               {({ data, loading, error }) => {
+               {({ data, loading, error, subscribeToMore }) => {
+                  console.log("GETTING PRODUCTION", loading);
 
                   if (error) {
                      return (<div>Error</div>)
@@ -32,11 +32,9 @@ class App extends Component {
                   }
 
                   return (
-                     <div>
-                        {products.map(product => (
-                           <ProductItem key={product.id} data={product} />
-                        ))}
-                     </div>
+                     <ProductList
+                        subscribeToMore={subscribeToMore}
+                        products={products} />
                   )
                }}
             </Query>
