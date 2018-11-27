@@ -1,11 +1,13 @@
-## 🍄️ / Example-02
+# 🍄️ / Example-02
 
-👉🏻 Installing
+## 👉🏻 Installing
 
 1. Clone this repository using `git clone`.
 2. Onto the repository, install the dependecies using `yarn install` or `npm install`
 
-👉🏻 Running:
+---
+
+## 👉🏻 Running:
 
 ```shell
 # Starting MongoDB
@@ -20,7 +22,9 @@ cd fronted
 yarn start
 ```
 
-👉🏻 Example of Query / Mutation / Subscription
+---
+
+## 👉🏻 Example of Query / Mutation / Subscription
 
 Query
 

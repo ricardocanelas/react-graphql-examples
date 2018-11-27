@@ -25,7 +25,26 @@ For all examples:
 >
 > ### 🍄️ [example-**02**](https://github.com/ricardocanelas/react-graphql-examples/tree/master/example-02)
 >
-> - Frontend: An example how to query/mutation/subscription using `React` + `Apollo`.
-> - Backend: An example using `GraphQL-Yoga`.
+> An example how to query/mutation/subscription using `React` + `Apollo`.
+> *(using the 'backend-01', make sure to start the server)*
+>
+> ---
+
+> ----
+>
+> ### 🍄️ [example-**03**](https://github.com/ricardocanelas/react-graphql-examples/tree/master/example-03)
+>
+> An example how to query using `React` + `Relay`.
+> *(using the 'backend-01', make sure to start the server)*
+>
+> ---
+
+**BONUS**
+
+> ----
+>
+> ### 🍄️ [backend-**01**](https://github.com/ricardocanelas/react-graphql-examples/tree/master/backend-01)
+>
+> An example using `GraphQL-Yoga`.
 >
 > ---

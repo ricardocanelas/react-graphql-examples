@@ -1,6 +1,6 @@
-## 🍄️ / Example-01
+# 🍄️ / Example-01
 
-👉🏻 Installing
+## 👉🏻 Installing
 
 1. Clone this repository using `git clone`.
 2. Onto the repository, install the dependecies using `yarn install` or `npm install`
@@ -10,7 +10,9 @@ yarn install
 yarn start
 ```
 
-👉🏻 Configuration
+---
+
+## 👉🏻 Configuration
 
 **You need to have a Github token.**
 
