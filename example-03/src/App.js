@@ -1,39 +1,40 @@
 import React, { Component } from 'react';
-import { graphql, QueryRenderer } from 'react-relay';
-import environment from './environment';
+import { QueryRenderer } from 'react-relay';
 
-// ATTENTION
-// Note that the name of the query must be <FileName>Query.
-// So query AppQuery { ... } will only work if the query is in a file named App.js.
-// So query ProductListQuery { ... } will only work if the query is in a file named ProductListQuery.js.
-// So on...
-const queryProducts = graphql`
-  query AppQuery {
-    products {
-      name
-    }
-  }
-`
+import ProductForm from './ProductForm';
+import ProductList from './ProductList';
+
+import environment from './environment';
+import { GET_PRODUCTS } from './graphql/query'
+
+import './style.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        Working...
+      <div className="container">
+
+        <h1>Products</h1>
+
+        <ProductForm />
 
         <QueryRenderer
           environment={environment}
-          query={queryProducts}
+          query={GET_PRODUCTS}
           variables={{}}
           render={({error, props}) => {
             if (error) {
               return <div>Error!</div>;
             }
+
             if (!props) {
               return <div>Loading...</div>;
             }
 
-            return <div>We have {props.products.length} products.</div>
+            return (
+              <ProductList
+                 products={props.products} />
+           )
           }}
         />
 

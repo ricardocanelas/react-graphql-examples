@@ -7,7 +7,8 @@
     "react-dom": "^16.6.3",
     "react-relay": "^1.7.0",
     "react-scripts": "2.1.1",
-    "relay-runtime": "^1.7.0"
+    "relay-runtime": "^1.7.0",
+    "subscriptions-transport-ws": "^0.9.15"
   },
   "devDependencies": {
     "babel-plugin-relay": "^1.7.0",
@@ -19,7 +20,7 @@
     "build": "node ./setup && react-scripts build",
     "test": "node ./setup && react-scripts test",
     "eject": "react-scripts eject",
-    "relay": "relay-compiler --src ./src --schema ../example-02/backend/src/graphql/schema.graphql",
+    "relay": "relay-compiler --src ./src --schema ../backend-01/src/graphql/schema.graphql",
     "relay:watch": "yarn relay -- --watch"
   },
   "eslintConfig": {
