@@ -3,13 +3,18 @@ import { QueryRenderer } from 'react-relay';
 
 import ProductForm from './ProductForm';
 import ProductList from './ProductList';
-
 import environment from './environment';
-import { GET_PRODUCTS } from './graphql/query'
+import { GET_PRODUCTS } from './graphql/query';
+// import { SUBSCRIPTION_PRODUCT_CREATED_request } from './graphql/subscription';
 
 import './style.css'
 
 class App extends Component {
+
+  componentDidMount() {
+    // SUBSCRIPTION_PRODUCT_CREATED_request(environment, {});
+  }
+
   render() {
     return (
       <div className="container">
