@@ -2,7 +2,25 @@
 
 Using [graphql-yoga](https://github.com/prisma/graphql-yoga) (Fully-featured GraphQL Server).
 
-Playground URL: http://localhost:4000/playground
+**Installing**
+
+```
+yarn install
+```
+
+**Getting Started**
+
+```
+mongod
+```
+
+```
+yarn start
+```
+
++ Playground URL: http://localhost:4000/playground
++ Endpoint URL: http://localhost:4000/graphql
++ Subscriptions URL: http://localhost:4000/subscriptions
 
 ---
 
