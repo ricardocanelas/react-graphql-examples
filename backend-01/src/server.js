@@ -8,7 +8,7 @@ import Subscription from './graphql/resolvers/Subscription'
 // Constants
 // ---------
 
-const MONGODB_URI = 'mongodb://localhost:27017/react-graphql-examples-02'
+const MONGODB_URI = 'mongodb://localhost:27017/react-graphql-examples-backend-1'
 const PORT = 4000
 
 // ---------------
