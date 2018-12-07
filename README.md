@@ -48,3 +48,11 @@ For all examples:
 > An example using `GraphQL-Yoga`.
 >
 > ---
+
+> ----
+>
+> ### 🍄️ [backend-**02**](https://github.com/ricardocanelas/react-graphql-examples/tree/master/backend-02)
+>
+> An example using `graphpack`.
+>
+> ---
