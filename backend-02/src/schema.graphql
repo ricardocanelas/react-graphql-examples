@@ -1,0 +1,39 @@
+type Query {
+    hello: String
+    product(id: String): Product
+    products: [Product]
+    productsPagination(cursor: String, limit: Int): ProductPagination
+}
+
+type Mutation {
+    createProduct(name: String!, description: String, image: String, price: String): Product
+    updateProduct(id: ID!, name: String, description: String, image: String, price: String): Product
+    deleteProduct(id: ID!): Product
+}
+
+type Subscription {
+    productCreated: ProductMessage!
+}
+
+type ProductMessage {
+    message: Product!
+}
+
+type PageInfo {
+    hasNextPage: Boolean!
+    endCursor: String!
+}
+
+type ProductPagination {
+    totalCount: Int!
+    edges: [Product!]!
+    pageInfo: PageInfo!
+}
+
+type Product {
+    id: String
+    name: String
+    description: String
+    image: String
+    price: Float
+}

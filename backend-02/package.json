@@ -1,0 +1,17 @@
+{
+  "name": "react-graphql-examples-2-backend-2",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Ricardo Canelas",
+  "devDependencies": {
+    "graphpack": "^1.0.6"
+  },
+  "scripts": {
+    "start": "graphpack",
+    "build": "graphpack build"
+  },
+  "dependencies": {
+    "graphql-subscriptions": "^1.0.0",
+    "mongoose": "^5.3.14"
+  }
+}
